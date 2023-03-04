@@ -1,0 +1,50 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  color: #926239;
+  line-height: 1.6;
+}
+
+#showcase {
+  background-image: url(assets/beach.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+#showcase h1 {
+  font-size: 50px;
+}
+
+#showcase p {
+  font-size: 20px;
+}
+
+#showcase .button {
+  font-size: 18px;
+  text-decoration: none;
+  color: #926239;
+  border: 1px solid #926239;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#showcase .button:hover {
+  background: #926239;
+  color: #fff;
+}
