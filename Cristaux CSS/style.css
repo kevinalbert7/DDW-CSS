@@ -1,0 +1,110 @@
+body {
+  background: #010f19;
+}
+
+.box {
+  width: 800px;
+  height: 600px;
+  position: relative;
+  margin: 250px auto;
+}
+
+.faceSombre {
+  position: absolute;
+  bottom: 25%;
+  left: 45%;
+  width: 5%;
+  height: 50%;
+  background: rgb(78, 148, 189);
+}
+
+.faceClaire {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  width: 5%;
+  height: 50%;
+  background: #89e5f6;
+}
+
+.losange {
+  position: absolute;
+  top: -20%;
+  left: -100%;
+  width: 200%;
+  height: 40%;
+  background: #08517a;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.faceSombreRuby {
+  position: absolute;
+  bottom: 25%;
+  left: 40%;
+  width: 2.5%;
+  height: 30%;
+  background: rgb(100, 28, 28);
+}
+
+.faceClaireRuby {
+  position: absolute;
+  bottom: 25%;
+  left: 42.5%;
+  width: 2.5%;
+  height: 30%;
+  background: rgb(151, 83, 83);
+}
+
+.losangeRuby {
+  position: absolute;
+  top: -20%;
+  left: -100%;
+  width: 200%;
+  height: 40%;
+  background: rgb(233, 8, 8);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.faceClaireAmeth {
+  position: absolute;
+  right: 42.5%;
+  bottom: 25%;
+  width: 2.5%;
+  height: 35%;
+  background: #7c477c;
+}
+
+.faceSombreAmeth {
+  position: absolute;
+  right: 40%;
+  bottom: 25%;
+  width: 5%;
+  height: 35%;
+  background: #ad70ad;
+}
+
+.losangeAmeth {
+  position: absolute;
+  top: -20%;
+  width: 200%;
+  height: 40%;
+  background: #610461;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.brillance {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background: #fff;
+  animation: brillance 1.8s ease infinite;
+}
+
+@keyframes brillance {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -20%;
+  }
+}
