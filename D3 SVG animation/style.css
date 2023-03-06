@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #222;
+  overflow: hidden;
+}
+
+rect {
+  fill: transparent;
+  pointer-events: all; /* accepte tous les types d'évènements */
+}
+
+circle {
+  stroke-width: 3.5px;
+}
