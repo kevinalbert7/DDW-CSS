@@ -1,0 +1,88 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(45deg, rgb(137, 131, 228), rgb(248, 138, 138));
+  display: f;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-list {
+  font-size: 4.25rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  position: relative;
+  color: transparent;
+  cursor: pointer;
+}
+
+.mask {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  color: rgb(19, 7, 71);
+  top: 0;
+  height: 49%;
+  transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+}
+
+.mask span {
+  display: block;
+}
+
+.mask + .mask {
+  /* cible l'élément directement après qui a la classe mask*/
+  top: 48.9%;
+}
+
+.mask + .mask span {
+  /* on cible le deuxième span du dieuxième mask */
+  transform: translateY(-49%);
+}
+
+.item:hover .mask,
+.item:active .mask {
+  color: #fff;
+  transform: skewX(12deg) translateX(5px);
+}
+
+.item:hover .mask + .mask,
+.item:active .mask + .mask {
+  color: #fff;
+  transform: skewX(12deg) translateX(-5px);
+}
+
+.item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 49%;
+  left: -10%;
+  right: -10%;
+  height: 4px;
+  border-radius: 4px;
+  margin-top: -2px;
+  background: #ff2c75;
+  transform: scale(0);
+  transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  z-index: 1;
+}
+
+.item:hover::before,
+.item:active::before {
+  transform: scale(1);
+}
