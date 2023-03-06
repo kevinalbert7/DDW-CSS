@@ -1,0 +1,34 @@
+.container {
+  width: 1000px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-rows: 100px 200px 400px 100px;
+  grid-template-columns: 200px repeat(3, 1fr); /* Une colonne de 200px et 3 qui se partagent l'espace restant */
+  grid-gap: 30px;
+}
+
+.container > * {
+  /* > : cible tous les éléments se trouvant à l'intérieur de .container */
+  background-color: red;
+  padding: 20px;
+  color: white;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.header {
+  grid-column: 1 / -1; /* S'étend de la première à la dernière colonne (peut aussi s'écrire 1 / 5 => de la première à la cinquième) */
+}
+
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 2 / span 2; /* à partir de la deuxième cellule et prendra 2 cellules supplémentaires*/
+}
+
+.main-content {
+  grid-column: 2 / 5;
+}
+
+.footer {
+  grid-column: 1 / -1;
+}
