@@ -1,0 +1,143 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 10vw;
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+.content {
+  flex: 1 0 auto; /* grow(1: prend tout l'espace) shrink(0: ne va pas retrécir) basis(prend la largeur disponible) */
+}
+
+.content p {
+  padding: 5vw;
+  text-align: center;
+}
+
+footer {
+  flex-shrink: 0;
+  border-top: 1px dashed #000;
+  width: 100%;
+  background: #f1f1f1;
+  color: #333;
+}
+
+.content-footer {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 20px;
+  padding: 50px 0 100px;
+}
+
+.bloc {
+  width: 25%;
+  margin: 0 30px;
+}
+
+/* Contact */
+.footer-contact h3,
+.footer-service h3,
+.footer-horaires h3,
+.footer-medias h3 {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.footer-contact p {
+  padding: 5px 0;
+}
+
+/* Services */
+
+.list-services,
+.list-horaires,
+.list-medias {
+  list-style-type: none;
+}
+
+.list-services li {
+  padding: 2px 0;
+}
+
+.list-services a {
+  text-decoration: none;
+  color: #333;
+}
+
+.list-services a:hover {
+  color: rgb(3, 3, 3);
+}
+
+/* Médias */
+
+.list-medias {
+  position: relative;
+  right: 10px;
+}
+
+.list-medias img {
+  width: 40px;
+  margin: 10px 10px;
+}
+
+.list-medias a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1300px) {
+  .content-footer {
+    width: 700px;
+    flex-wrap: wrap;
+  }
+
+  .bloc {
+    width: 40%;
+    margin: 0 0;
+  }
+
+  .bloc:nth-child(1),
+  .bloc:nth-child(2) {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content-footer {
+    width: 320px;
+  }
+
+  .bloc {
+    width: 300px;
+    margin: 30px 30px;
+  }
+
+  .bloc:nth-child(1),
+  .bloc:nth-child(2) {
+    margin-bottom: 30px;
+  }
+}
