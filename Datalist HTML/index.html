@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datalist HTML</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Datalist HTML</h1>
+
+    <div class="bloc-form">
+      <label for="tel">Choisir un préfixe téléphonique</label>
+      <input type="text" id="tel" list="num-tel-pays" name="num-tel-pays" />
+
+      <datalist id="num-tel-pays">
+        <option value="France">33</option>
+        <option value="Inde">91</option>
+        <option value="Japon">81</option>
+        <option value="Italie">39</option>
+        <option value="Finlande">358</option>
+      </datalist>
+    </div>
+  </body>
+</html>
