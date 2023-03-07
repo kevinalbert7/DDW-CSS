@@ -1,0 +1,108 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-grid {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px; /* 1 col 200px, 1 col qui prend l'espace dispo, 1 col 200px */
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  grid-column: span 3; /* Prend 3 espaces*/
+  padding: 30px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #17bebb;
+  color: #fff;
+}
+
+nav {
+  background-color: #ef3e26;
+}
+
+.list-sidenav {
+  list-style-type: none;
+  max-height: 650px;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-sidenav li {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-sidenav li a {
+  font-size: 18px;
+  color: #f1f1f1;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+aside {
+  padding: 20px;
+  background-color: #edb88b;
+  font-size: 22px;
+  color: #333;
+}
+
+main {
+  padding: 20px;
+}
+
+aside p {
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  grid-column: span 3;
+  padding: 30px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #2e282a;
+  color: #fff;
+}
+
+/* Meadi queries */
+
+@media screen and (max-width: 1000px) {
+  .container-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-sidenav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .list-sidenav li {
+    margin: 0 10px;
+  }
+
+  main p {
+    min-height: 610px;
+  }
+
+  aside p {
+    height: auto;
+  }
+}
