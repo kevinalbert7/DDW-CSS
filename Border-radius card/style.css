@@ -1,0 +1,31 @@
+body {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cercle {
+  color: #fff;
+  padding: 90px;
+  width: 180px;
+  height: 180px;
+  margin-right: -15px;
+  mix-blend-mode: multiply;
+}
+
+.c1 {
+  background: #ffc30f;
+  border-radius: 31% 69% 70% 30% / 30% 32% 68% 70%;
+}
+
+.c2 {
+  background: #ff5733;
+  border-radius: 72% 25% 18% 82% / 41% 59% 41% 59%;
+}
+
+.c3 {
+  background: #8d3758;
+  border-radius: 24% 76% 16% 84% / 61% 59% 41% 39%;
+}
