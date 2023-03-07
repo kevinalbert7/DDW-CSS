@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #333;
+  font-family: sans-serif;
+}
+
+.btn {
+  padding: 12px 30px;
+  background: #f1f1f1;
+  width: 100px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  margin: 50px auto 0px;
+}
+
+.box {
+  margin: 100px auto;
+  width: 50px;
+  height: 50px;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: rotate(0deg);
+  transition: background-color 0.5s 0s, height 0.5s 0.5s, width 0.5s 1s,
+    transform 0.5s 1.5s;
+}
+
+.anim {
+  background: salmon;
+  width: 200px;
+  height: 100px;
+  transform: rotate(720deg);
+}
+
+.txt {
+  font-size: 20px;
+  color: #f1f1f1;
+  transform: translateX(400px);
+}
+
+.anim-p {
+  transition: transform 0.5s 2s ease-in;
+  transform: translateX(0px);
+}
