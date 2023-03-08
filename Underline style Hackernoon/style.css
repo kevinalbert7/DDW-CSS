@@ -1,0 +1,61 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  padding: 50px 0;
+  font-size: 80px;
+  text-align: center;
+}
+
+hr {
+  width: 300px;
+  height: 4px;
+  background: #222;
+  margin: 0 auto;
+}
+
+.content {
+  width: 800px;
+  margin: 100px auto 0;
+}
+
+.content p {
+  font-size: 25px;
+}
+
+.content a:visited {
+  color: black;
+}
+
+.anim-h {
+  color: black;
+  text-decoration: none;
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent calc(50% - 9px),
+    rgba(28, 236, 209, 0.37) calc(50% - 9px),
+    rgba(28, 236, 209, 0.37) 100%
+  );
+  transition: background-position 120ms ease-in-out 0s,
+    padding 120ms ease-in-out 0s;
+  background-size: 100% 200%;
+}
+
+.anim-h:hover {
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent calc(50% - 9px),
+    rgb(28, 236, 209) calc(50% - 9px),
+    rgb(28, 236, 209) 100%
+  );
+  background-position: 0px 100%;
+}
