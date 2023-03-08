@@ -1,0 +1,38 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cette animation n'est pas optimisée pour plusieurs mots (problème si du texte se met à la ligne) */
+
+h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  display: inline; /* Prend uniquement la largeur de son contenu */
+}
+
+h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #000;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+h1:hover::after {
+  transform: scale(1);
+}
