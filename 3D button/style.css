@@ -1,0 +1,33 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #18181e;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn {
+  display: block;
+  margin: 150px auto 0;
+  font-size: 30px;
+  font-weight: lighter;
+  color: #333;
+  padding: 25px 80px;
+  background: #ffd17b;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 6px #efa424;
+}
+
+.btn:active {
+  box-shadow: 0 4px #efa424;
+  top: 6px;
+}
