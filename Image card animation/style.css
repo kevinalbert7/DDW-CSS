@@ -1,0 +1,78 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.container-card {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container-card span {
+  width: 230px;
+  height: 80px;
+  background: #563a58;
+  font-size: 27px;
+  font-family: sans-serif;
+  border: 3px solid #333;
+  font-weight: 700;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  position: absolute;
+  left: -30px;
+  bottom: -40px;
+}
+
+.img-bloc {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #7e66a0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: #333;
+  top: -15px;
+  right: -15px;
+}
+
+.img-bloc img {
+  width: 40px;
+  height: 40px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.img-zoom {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/Japan.jpg);
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.4s ease-in-out;
+  transform: scale(1);
+  will-change: transform;
+}
+
+.card:hover .img-zoom {
+  transform: scale(1.3);
+}
