@@ -1,0 +1,87 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: Montserrat, Helvetica, sans-serif;
+  background: white;
+  /* background-image: linear-gradient(62deg, rgb(233, 121, 112),rgb(213, 192, 80)); */
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 100px 20px 0;
+}
+
+p {
+  text-transform: uppercase;
+  color: #222;
+  font-weight: 900;
+  color: transparent;
+  font-size: 0px; /* retire l'espace entre les lignes */
+}
+
+p span {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  font-size: clamp(20px, 8vw, 120px);
+}
+
+p span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+p:nth-child(1) {
+  font-weight: 300;
+  animation: txt-appearance 0s 1s forwards;
+}
+
+p:nth-child(2) {
+  animation: txt-appearance 0s 1.35s forwards;
+}
+
+p:nth-child(1) span::after {
+  /* background: salmon; */
+  background: white;
+  animation: slide-in 0.75s ease-out forwards,
+    slide-out 0.75s 1s ease-out forwards;
+}
+
+p:nth-child(2) span::after {
+  /* background: royalblue; */
+  background: white;
+  animation: slide-in 0.75s 0.6s ease-out forwards,
+    slide-out 0.75s 1.3s ease-out forwards;
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes txt-appearance {
+  100% {
+    color: #222;
+  }
+}
