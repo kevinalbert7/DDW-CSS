@@ -1,0 +1,98 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #222;
+  min-height: 930px;
+  position: relative;
+}
+
+.card {
+  min-width: 850px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px 80px 120px;
+  box-shadow: 0 0 10vw #7476ff, 0 0 2vw 0.4vw #0408fb,
+    inset 0 0 0.5vw 0.2vw #7476ff, inset 0 0 0.2vw 0.2vw #3134ff,
+    inset 0 0 0.25vw 0.2vw #0408fb;
+  border-radius: 22px;
+}
+
+.card h1 {
+  font-family: Mali, sans-serif;
+  font-size: 130px;
+  font-weight: 300;
+  color: #f1f1f1e3;
+  text-shadow: 0.1vw 0vw 0.25vw #7476ff, 0.15vw 0vw 0.25vw #7476ff,
+    0.1vw 0vw 0.1vw #3134ff, 0.15vw 0vw 0.1vw #3134ff, 0.4vw 0vw 0.1vw #3134ff,
+    0.1vw 0vw 2vw #3134ff, 0.15vw 0vw 2vw #3134ff, 0.4vw 0vw 2vw #3134ff,
+    0.1vw 0vw 1vw #0408fb, 0.15vw 0vw 1vw #0408fb, 0.4vw 0vw 5vw #0408fb,
+    0.1vw 0vw 5vw #0408fb, 0.15vw 0vw 20vw #0408fb, 0.4vw 0vw 10vw #0408fb;
+  animation: blink 2s infinite alternate;
+}
+
+.card span {
+  font-family: Raleway, sans-serif;
+  padding-left: 10px;
+  font-size: 50px;
+  letter-spacing: 5px;
+  color: #f1f1f1cb;
+  text-shadow: 0.1vw 0vw 0.25vw #ff7474, 0.125vw 0vw 0.25vw #ff7474,
+    0.1vw 0vw 0.1vw #ff3131, 0.125vw 0vw 0.1vw #ff3131, 0.15vw 0vw 0.1vw #ff3131,
+    0.1vw 0vw 2vw #ff3131, 0.125vw 0vw 2vw #ff3131, 0.15vw 0vw 2vw #ff3131,
+    0.1vw 0vw 1vw #fb0404, 0.15vw 0vw 1vw #fb0404, 0.4vw 0vw 5vw #fb0404,
+    0.1vw 0vw 5vw #fb0404, 0.125vw 0vw 20vw #fb0404, 0.15vw 0vw 10vw #fb0404;
+}
+
+.card img {
+  position: absolute;
+  width: 250px;
+  filter: drop-shadow(0 0.15vw 0.3vw #fffb0e)
+    drop-shadow(0 0.15vw 0.3vw #8a8942);
+  animation: saxo-blink 2s infinite alternate;
+}
+
+@keyframes blink {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 0.5vw #7476ff, 0.1vw 0 0.5vw #7476ff, 0.3vw 0 0.5vw #7476ff,
+      0 0 1.2vw #3134ff, 0.1vw 0 1.2vw #3134ff, 0.3vw 0 1.2vw #3134ff,
+      0 0 3vw #0408fb, 0.1vw 0 3vw #0408fb, 0.3vw 0 3vw #0408fb;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes saxo-blink {
+  0%,
+  9%,
+  15%,
+  79%,
+  83%,
+  100% {
+    filter: drop-shadow(0 0.15vw 0.3vw #fffb0e)
+      drop-shadow(0 0.15vw 0.3vw #8a8942);
+  }
+  10%,
+  14%,
+  80%,
+  82% {
+    filter: none;
+  }
+}
