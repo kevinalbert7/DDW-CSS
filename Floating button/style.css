@@ -1,0 +1,82 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: Raleway;
+}
+
+h1 {
+  font-size: clamp(35px, 8vw, 60px);
+  position: relative;
+  margin: 20px auto 70px;
+}
+
+h1::after {
+  content: "Le meilleur du monde ? ";
+  font-size: clamp(14px, 3vw, 20px);
+  font-family: Quicksand;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+}
+
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.content p {
+  margin-bottom: 15px;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 75px;
+  height: 75px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  background: linear-gradient(45deg, purple, violet);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-btn img {
+  width: 35px;
+  height: 35px;
+}
+
+.floating-btn .tooltip {
+  position: absolute;
+  background: #fff;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 3px;
+  line-height: 1.4;
+  text-align: left;
+  width: 250px;
+  transform: translate(-180px, -50%);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.floating-btn:hover .tooltip {
+  /* display: block; */
+  visibility: visible;
+  opacity: 1;
+}
