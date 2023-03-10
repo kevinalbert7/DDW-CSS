@@ -1,0 +1,46 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(45deg, red, blue);
+}
+
+.container {
+  width: 1300px;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(45deg, blue, red);
+  overflow: hidden;
+}
+
+.marquee {
+  font-size: 100px;
+  line-height: 1.3;
+  font-family: sans-serif;
+  padding: 24px 0;
+  color: #fff;
+  white-space: nowrap;
+  animation: marquee 20s infinite linear;
+}
+
+.marquee::after {
+  content: "- LONDON - PARIS - NEW YORK - TOKYO - SYDNEY - BERLIN - ROME";
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
