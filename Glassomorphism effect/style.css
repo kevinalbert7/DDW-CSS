@@ -1,0 +1,122 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, Helvetica, sans-serif;
+  background: rgb(21, 22, 26);
+  color: #f1f1f1;
+}
+
+.desk-nav {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  padding: 20px 5px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #a4a4a4;
+}
+
+.desk-nav a {
+  text-decoration: none;
+  color: #f1f1f1;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+.global-toggler,
+.curtain-menu {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .desk-nav {
+    display: none;
+  }
+
+  .global-toggler {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #f4f4f4cc;
+    background: #15161a;
+    position: fixed;
+    top: 15px;
+    left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .global-toggler img {
+    width: 30px;
+  }
+
+  .curtain-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    text-align: center;
+    padding: 20px 5px;
+    border-radius: 1px solid #a4a4a4;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-out;
+  }
+
+  .curtain-menu a {
+    display: block;
+    text-decoration: line; /* On laisse la ligne */
+    text-underline-offset: 4px; /* Décalage de la ligne */
+    text-decoration-thickness: 1px; /* Epaisseur de la ligne */
+    color: #f1f1f1;
+    margin: 50px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  .curtain-menu.active {
+    transform: translateX(0%);
+  }
+
+  .top-menu-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 1px solid #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: none;
+    color: #f1f1f1;
+    cursor: pointer;
+  }
+}
+
+main {
+  margin: 0 auto;
+  min-width: 1100px;
+  padding-top: 100px;
+}
+
+article {
+  padding: 0 30px;
+}
+
+article h1 {
+  font-size: 60px;
+  margin-bottom: 2àpx;
+}
+
+.decoration-img {
+  margin-bottom: 50px;
+}
