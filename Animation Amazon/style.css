@@ -103,3 +103,29 @@ h1 {
 .card li:hover {
   background: rgba(51, 51, 51, 0.067);
 }
+
+/* Media Queries */
+
+/* Pointer: coarse correpond à la navigation au doigt */
+@media screen and (max-width: 772px), (pointer: coarse) {
+  .card {
+    height: auto;
+    box-shadow: 0 5px 5px rgba(20, 20, 20, 0.17);
+  }
+
+  .circle-container {
+    width: 50%;
+    margin: 10px auto 0;
+  }
+
+  .card h2 {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+
+  .card:hover h2,
+  .card:hover ul,
+  .card:hover .circle-container {
+    transform: none;
+  }
+}
