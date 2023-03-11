@@ -1,0 +1,28 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Mali, sans-serif;
+  background: rgb(216, 203, 132);
+}
+
+.txt-3d {
+  font-size: 150px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #efefef;
+  text-shadow: 1px 1px #919191, 1px 2px #919191, 1px 3px #919191,
+    1px 4px #919191, 1px 5px #919191, 1px 6px #919191, 1px 7px #919191,
+    1px 8px #919191, 1px 9px #919191, 1px 10px 1px #919191,
+    1px 18px 6px #2d2d2d66, 1px 22px 10px #2d2d2d66, 1px 25px 35px #2d2d2d66,
+    1px 30px 60px #2d2d2d66;
+}
