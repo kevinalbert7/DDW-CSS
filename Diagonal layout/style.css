@@ -1,0 +1,132 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global */
+
+body {
+  font-family: Open sans, Helvetica, sans-serif;
+  background: #111;
+}
+
+h1,
+h2 {
+  font-family: Raleway, Helvetica, sans-serif;
+}
+
+.clipped-video-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.text-section {
+  background-color: #111;
+  text-align: center;
+}
+
+.text-section h1,
+.text-section h2 {
+  font-size: 30px;
+  color: #f1f1f1;
+}
+
+.text-section p {
+  max-width: 500px;
+  color: #b5b5b5;
+  line-height: 1.6;
+  margin: 20px auto 0;
+}
+
+.clipped-section video {
+  width: 100%;
+  border: 10px solid #111;
+}
+
+/* Page */
+
+.text-section-1 {
+  padding: 65px 10px 50px;
+}
+
+.clipped-section {
+  background-color: #ff742e;
+  padding: 80px 10px 120px;
+  color: #111;
+  clip-path: polygon(0 12%, 100% 0%, 100% 88%, 0 100%);
+}
+
+.clipped-section h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.text-section-2 {
+  padding: 40px 10px 70px;
+}
+
+@counter-style benefits-list {
+  system: cyclic; /* Répète la liste d'emojis*/
+  symbols: "🤑" "🧠" "💖" "🕺🏻" "🧮";
+  suffix: " "; /* L'espace empêche d'avoir des points apèrs les emojis */
+}
+
+.text-section-2 ul {
+  list-style-type: benefits-list;
+  max-width: fit-content; /* Le contenu de la list */
+  margin: 0 auto;
+  color: #f1f1f1;
+}
+
+.text-section-2 li {
+  position: relative;
+  font-size: 25px;
+  font-family: Raleway, sans-serif;
+}
+
+.text-section-2 li:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 30px 0;
+}
+
+.text-section-2 li::marker {
+  font-size: 35px;
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+  .text-section-2 li {
+    font-size: 20px;
+  }
+
+  .text-section-2 li::marker {
+    font-size: 30px;
+  }
+}
+
+.text-section-3 {
+  padding: 40px 10px 80px;
+}
+
+footer {
+  text-align: center;
+  padding: 12px 5px;
+  border-top: 1px solid #6e6e6e;
+}
+
+footer a {
+  color: #f1f1f1;
+  text-decoration: none;
+}

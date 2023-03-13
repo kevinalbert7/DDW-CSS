@@ -1,0 +1,121 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Slider horizontal */
+
+.slider-1 {
+  max-width: 600px;
+  overflow: hidden;
+  border: 1px solid #f1f1f1;
+}
+
+.slider-1 .sliderH {
+  display: flex;
+  animation: slider-1 12s infinite ease-in-out;
+  /* Pour inverser l'animation(changer le translate en positif) */
+  /* flex-direction: row-reverse;  */
+}
+
+.slider-1 p {
+  background: rgb(101, 15, 15);
+  flex-shrink: 0;
+  padding: 72px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+  color: #f1f1f1;
+}
+
+/* 
+  Arbitrairement 5% par transition
+  Temps de pause = (100% - (nb de slide * temps de transiton)) / nb de slide
+*/
+
+@keyframes slider-1 {
+  0%,
+  20% {
+    transform: translateX(0);
+  }
+  25%,
+  45% {
+    transform: translateX(-100%);
+  }
+  50%,
+  70% {
+    transform: translateX(-200%);
+  }
+  75%,
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
+
+/* Slider vertical */
+
+.slider-2 {
+  width: 600px;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #f1f1f1;
+}
+
+.slider-2 .sliderV {
+  height: 100%;
+  animation: slider-2 12s infinite ease-in-out;
+  /* Pour inverser l'animation(changer le translate en positif) */
+  /* display: flex;
+    flex-direction: column-reverse; */
+}
+
+.slider-2 p {
+  background: rgb(21, 15, 101);
+  flex-shrink: 0;
+  padding: 72px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+  color: #f1f1f1;
+}
+
+@keyframes slider-2 {
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  25%,
+  45% {
+    transform: translateY(-100%);
+  }
+  50%,
+  70% {
+    transform: translateY(-200%);
+  }
+  75%,
+  95% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}
